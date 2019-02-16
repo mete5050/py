@@ -1,0 +1,72 @@
+import os
+import random
+rndm = 0
+
+normal = '\033[0m'
+kirmizi= '\033[31m'
+yesil= '\033[32m'
+sari= '\033[33m'
+lacivert= '\033[34m'
+mor= '\033[35m'
+mavi= '\033[36m'
+pmavi = '\033[96m'#p --> parlak
+pyesil = '\033[92m'
+psari = '\033[93m'
+siyah = '\033[90m'
+asiyah= '\033[40m'#a --> arkaplan
+akirmizi= '\033[41m'
+ayesil= '\033[42m'
+asari= '\033[43m'
+alacivert= '\033[44m'
+amor= '\033[45m'
+amavi= '\033[46m'
+abeyaz= '\033[47m'
+apsiyah= '\033[100m'#a --> arkaplan
+apkirmizi= '\033[101m'
+apyesil= '\033[102m'
+apsari= '\033[103m'
+aplacivert= '\033[104m'
+apmor= '\033[105m'
+apmavi= '\033[106m'
+apbeyaz= '\033[107m'
+
+harfler = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u','v','y','z','x','w','/',':',',','`','.','-','_','*','=','\ ','(',')','[',']','&','%','+','$','#','^','!','>','^','é','£','1','2','9','0','7','6','8','4','5','3',' ']
+radom = []
+
+while rndm < int(len(harfler)):
+    radom.append( random.randint(0,1000))
+    #print (harfler[rndm])
+    #print (radom[rndm])
+    #print ("\n")
+    rndm+=1
+
+czm=open('cozum.txt','a')
+czm.write(str(radom))
+print("1-Şifreleme yap")
+print("2-Şifreleme çöz")
+x=input("Seçiminiz :") 
+if (x== "1"):
+    print("1-Kelime veya bir cümleyi girerek")
+    print("2-Bir hedef dosya belirterek ")
+    print(" ")
+    scm = int(input("Seçiminiz :"))
+    if(scm == 1):
+        klm = input("Kelime veya kelime gurubunu giriniz :")
+        klml = list(klm)
+        print (klml)
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+#hd = str(input("Hedef dosyayı girin :")) 
+#print (harfler)
+#print (radom)

@@ -1,0 +1,17 @@
+import cv2
+
+kamera=cv2.VideoCapture(0)
+
+
+
+while True:
+    ret, goruntu=kamera.read()
+    griton=cv2.cvtColor(goruntu,cv2.COLOR_BGR2GRAY)
+
+    cv2.imshow('Goruntu',goruntu)
+    cv2.imshow('Gri Ton', griton)
+    
+    if cv2.waitKey(27) & 0xFF==ord('q'):
+        break
+kamera.release()
+cv2.destroyAllWindows()
