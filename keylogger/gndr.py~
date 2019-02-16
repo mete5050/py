@@ -1,0 +1,34 @@
+from __future__ import print_function
+import pyxhook
+import time
+import os 
+dosya = open("/home/mete/Belgeler/gndr.txt","w")
+
+def kbevent(event):
+    global running
+    dosya = open("/home/mete/Belgeler/gndr.txt","w")
+    if event.Ascii == 119:
+        print("ileri")
+        dosya.write("ileri")
+    if event.Ascii == 115:
+    				dosya.write("geri")
+        
+    if event.Ascii == 97:
+        print("sol")
+        dosya.write("sol")
+    if event.Ascii == 100:
+        print("sag")
+        dosya.write("sag")
+    dosya.close()
+
+hookman = pyxhook.HookManager()
+hookman.KeyDown = kbevent
+hookman.HookKeyboard()
+hookman.start()
+
+
+
+while True:
+    time.sleep(0.1),
+hookman.cancel()
+
